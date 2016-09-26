@@ -1,1 +1,16 @@
-<h1>Home Page</h1>
+<h1>Things to do!</h1>
+<div ng-controller="HomeCtrl">
+  <ul>
+    <li ng-repeat="task in tasks">
+      <!-- edit a task -->
+      <input ng-model="task.text" ng-change="tasks.$save(task)" />
+      <!-- delete a task -->
+      <button ng-click="tasks.$remove(task)">Remove Task</button>
+    </li>
+  </ul>
+  <!-- push a new task onto the array -->
+  <form ng-submit="addTask()">
+    <input ng-model="newTaskText" />
+    <button type="submit">Add Task</button>
+  </form>
+</div>
