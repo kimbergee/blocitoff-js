@@ -3,18 +3,19 @@
   <!-- push a new task onto the array -->
   <center>
     <form ng-submit="addTask()">
-      <input class="task-input" ng-model="newTaskText" placeholder="Add a new task" />
+      <input class="task-input" ng-model="newTask.text" placeholder="Add a new task" />
       <button type="submit" class="ghost-button">add</button>
     </form>
   </center>
   <br><br><br>
 
-  <table class="railway">
+  <table class="raleway">
     <tr>
       <th>Current to-dos:</th>
     </tr>
-    <tr ng-repeat="task in tasks">
+    <tr ng-repeat="task in tasks" ng-hide="expiredTask(task)">
       <td>{{ task.text }}</td>
+      <td><small>added {{ taskAge(task) }}</small></td>
       <td><button ng-click="tasks.$remove(task)" class="ghost-button-small">remove</button></td>
     </tr>
   </table>
