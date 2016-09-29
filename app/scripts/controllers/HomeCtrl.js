@@ -14,11 +14,18 @@
     };
 
     $scope.taskAge = function(task) {
-      return taskAge(task);
+      var age = moment(task.time).fromNow();
+      return age;
     };
 
     $scope.expiredTask = function(task) {
-      return expiredTask(task);
+      var now = new moment();
+      var createdAt = new moment(task.time);
+      if ((now - createdAt) >= 604800000) {
+        return true;
+      } else {
+        return false;
+      }
     };
 
     // Supporting Functions
@@ -29,32 +36,6 @@
         completed: false
       };
     }
-
-    var taskAge = function(task) {
-      var age = moment(task.time).startOf('hour').fromNow();
-      return age;
-    };
-
-/*  Ben's original code:
-    var getDaysOld = function(task) {
-      var now = new moment();
-      var date = new moment(task.time);
-      var diff = now.diff(date);
-      var duration = moment.duration(diff);
-      return duration.days();
-      return diff;
-    };
-*/
-
-    var expiredTask = function(task) {
-      var now = new moment();
-      var createdAt = new moment(task.time);
-      if ((now - createdAt) >= 604800000) {
-        return true;
-      } else {
-        return false;
-      }
-    };
 
     init();
   }

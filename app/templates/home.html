@@ -6,7 +6,7 @@
       <input class="task-input" ng-model="newTask.text" placeholder="Add a new task" />
       <button type="submit" class="ghost-button">add</button>
     </form>
-  </center>
+
   <br><br><br>
 
   <table class="raleway">
@@ -19,6 +19,11 @@
       <td><button ng-click="tasks.$remove(task)" class="ghost-button-small">remove</button></td>
     </tr>
   </table>
+
+  <br><br><br><br>
+
+  <a ui-sref="history" class="ghost-button">Task History</a>
+  </center>
 
   <!-- <ul>
     <li ng-repeat="task in tasks"> -->
