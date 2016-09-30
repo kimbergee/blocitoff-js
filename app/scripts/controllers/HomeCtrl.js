@@ -28,12 +28,23 @@
       }
     };
 
+    $scope.priorityText = function(task) {
+      if (task.priority == 3) {
+        return "low";
+      } else if (task.priority == 1) {
+        return "high";
+      } else {
+        return "medium";
+      }
+    };
+
     // Supporting Functions
     var createBlankTask = function() {
       $scope.newTask = {
         text: "",
         time: firebase.database.ServerValue.TIMESTAMP,
-        completed: false
+        completed: false,
+        priority: "2",
       };
     }
 

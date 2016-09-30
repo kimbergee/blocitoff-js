@@ -4,6 +4,11 @@
   <center>
     <form ng-submit="addTask()">
       <input class="task-input" ng-model="newTask.text" placeholder="Add a new task" />
+      <select class="drop-down" ng-model="newTask.priority" placeholder="Set priority level" />
+        <option value="3">low</option>
+        <option value="2">medium</option>
+        <option value="1">high</option>
+      </select>
       <button type="submit" class="ghost-button">add</button>
     </form>
 
@@ -11,16 +16,22 @@
 
   <table class="raleway">
     <tr>
-      <th>Current to-dos:</th>
+      <thead><th colspan="4" id="list-name">Current to-dos:</th></thead>
     </tr>
-    <tr ng-repeat="task in tasks" ng-hide="expiredTask(task)">
-      <td>{{ task.text }}</td>
-      <td><small>added {{ taskAge(task) }}</small></td>
-      <td><button ng-click="tasks.$remove(task)" class="ghost-button-small">remove</button></td>
+    <tr>
+      <th colspan="1" id="column-name">Description</th>
+      <th colspan="1" id="column-name">Priority</th>
+      <th colspan="1" id="column-name">Created</th>
+    </tr>
+    <tr ng-repeat="task in tasks | orderBy: 'priority'" ng-hide="expiredTask(task)">
+      <td id="column-border">{{ task.text }}</td>
+      <td id="column-border" class="grey-ital">{{ priorityText(task) }}</td>
+      <td id="column-border" class="grey-ital">{{ taskAge(task) }}</td>
+      <td><button ng-click="tasks.$remove(task)" class="ghost-button-small" id="red-pc">remove</button></td>
     </tr>
   </table>
 
-  <br><br><br><br>
+  <br><br>
 
   <a ui-sref="history" class="ghost-button">Task History</a>
   </center>
