@@ -122,6 +122,14 @@ td {
   border-right: 1px dashed #C9E4F9;
 }
 
+.fa-circle-o:hover {
+  cursor: pointer;
+}
+
+.fa-check-circle:hover {
+  cursor: pointer;
+}
+
 
 
 /*

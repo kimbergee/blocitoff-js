@@ -27,6 +27,7 @@
       <td id="column-border">{{ task.text }}</td>
       <td id="column-border" class="grey-ital">{{ priorityText(task) }}</td>
       <td id="column-border" class="grey-ital">{{ taskAge(task) }}</td>
+      <td><i ng-class="!task.completed? 'fa fa-circle-o' : 'fa fa-check-circle'" ng-click="toggle(task)"></i></td>
       <td><button ng-click="tasks.$remove(task)" class="ghost-button-small" id="red-pc">remove</button></td>
     </tr>
   </table>

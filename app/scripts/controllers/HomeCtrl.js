@@ -7,7 +7,7 @@
       createBlankTask();
     };
 
-    // View Functions
+// View Functions
     $scope.addTask = function() {
       $scope.tasks.$add($scope.newTask);
       createBlankTask();
@@ -16,6 +16,12 @@
     $scope.taskAge = function(task) {
       var age = moment(task.time).fromNow();
       return age;
+    };
+
+// switches and saves completed/not completed on view
+    $scope.toggle = function(task) {
+      task.completed = !task.completed;
+      $scope.tasks.$save(task);
     };
 
     $scope.expiredTask = function(task) {
@@ -38,13 +44,14 @@
       }
     };
 
-    // Supporting Functions
+// Supporting Functions
     var createBlankTask = function() {
       $scope.newTask = {
         text: "",
         time: firebase.database.ServerValue.TIMESTAMP,
         completed: false,
         priority: "2",
+        state: "active"
       };
     }
 
