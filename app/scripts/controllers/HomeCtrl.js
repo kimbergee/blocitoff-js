@@ -13,17 +13,19 @@
       createBlankTask();
     };
 
+// calculates and displays task age for view
     $scope.taskAge = function(task) {
       var age = moment(task.time).fromNow();
       return age;
     };
 
-// switches and saves completed/not completed on view
+// switches and saves completed/not completed on view and also changes task state
     $scope.toggle = function(task) {
       task.completed = !task.completed;
       $scope.tasks.$save(task);
     };
 
+// checks and saves for expired tasks which are then hidden from the active list
     $scope.expiredTask = function(task) {
       var now = new moment();
       var createdAt = new moment(task.time);
@@ -34,6 +36,7 @@
       }
     };
 
+// displays priorty as low, medium, or high instead of 3, 2, 1
     $scope.priorityText = function(task) {
       if (task.priority == 3) {
         return "low";
@@ -51,7 +54,6 @@
         time: firebase.database.ServerValue.TIMESTAMP,
         completed: false,
         priority: "2",
-        state: "active"
       };
     }
 
