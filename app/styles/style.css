@@ -1,6 +1,7 @@
 body {
   margin-left: 100px;
   margin-right: 100px;
+  margin-bottom: 100px;
 }
 
 h1 {
@@ -17,6 +18,16 @@ h5 {
 
 .raleway {
   font-family: 'Raleway', sans-serif;
+}
+
+#red-pc {
+  color: #FC9D9A;
+}
+
+.grey-ital {
+  color: #c9c9c9;
+  font-style: italic;
+  font-size: 12px;
 }
 
 .ghost-button {
@@ -67,19 +78,17 @@ h5 {
   font-size: 17px;
   padding: 7px 12px;
   font-weight: normal;
-  margin: 6px 0;
   margin-right: 6px;
   display: inline-block;
 }
 
-.task-input-small {
+.drop-down {
   border: 1px solid #C9E4F9;
+  background-color: white;
   font-family: 'Raleway', sans-serif;
-  font-size: 15px;
-  padding: 2px 4px;
+  font-size: 12px;
   font-weight: normal;
-  margin: 3px 0;
-  margin-right: 3px;
+  margin-right: 20px;
   display: inline-block;
 }
 
@@ -88,9 +97,37 @@ table {
   padding: 10px 5px 10px 20px;
 }
 
-th {
+td {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#list-name {
   font-family: 'Pacifico', cursive;
-  font-size: 25px;
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#column-name {
+  font-family: 'Pacifico', cursive;
+  font-size: 16px;
+  font-weight: 100;
+  text-align: left;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+#column-border {
+  border-right: 1px dashed #C9E4F9;
+}
+
+.fa-circle-o:hover {
+  cursor: pointer;
+}
+
+.fa-check-circle:hover {
+  cursor: pointer;
 }
 
 

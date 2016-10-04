@@ -1,14 +1,19 @@
-<br><br>
 <center>
   <table class="raleway">
     <tr>
-      <th>Past to-dos:</th>
+      <thead><th colspan="4" id="list-name">Past to-dos:</th></thead>
+    </tr>
+    <tr>
+      <th colspan="1" id="column-name">Description</th>
+      <th colspan="1" id="column-name">Priority</th>
+      <th colspan="1" id="column-name">Created</th>
     </tr>
     <tr ng-repeat="task in tasks" ng-show="expiredTask(task)">
-      <td>{{ task.text }}</td>
-      <td><small>added {{ taskAge(task) }}</small></td>
+      <td id="column-border">{{ task.text }}</td>
+      <td id="column-border" class="grey-ital">{{ priorityText(task) }}</td>
+      <td class="grey-ital">{{ taskAge(task) }}</td>
     </tr>
   </table>
-  <br><br><br><br>
+  <br><br>
   <a ui-sref="home" class="ghost-button">back to current tasks</a>
 </center>
