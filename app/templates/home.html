@@ -9,12 +9,12 @@
         <option value="2">medium</option>
         <option value="1">high</option>
       </select>
-      <button type="submit" class="ghost-button">add</button>
+      <button type="submit" class="main-btn">add</button>
     </form>
 
-  <br><br><br>
+  <br><br>
 
-  <table class="raleway">
+  <table>
     <tr>
       <thead><th colspan="4" id="list-name">Current to-dos:</th></thead>
     </tr>
@@ -25,16 +25,16 @@
     </tr>
     <tr ng-repeat="task in tasks | orderBy: 'priority'" ng-hide="expiredTask(task)">
       <td id="column-border">{{ task.text }}</td>
-      <td id="column-border" class="grey-ital">{{ priorityText(task) }}</td>
-      <td id="column-border" class="grey-ital">{{ taskAge(task) }}</td>
-      <td><i ng-class="!task.completed? 'fa fa-circle-o' : 'fa fa-check-circle'" ng-click="toggle(task)"></i></td>
-      <td><button ng-click="tasks.$remove(task)" class="ghost-button-small" id="red-pc">remove</button></td>
+      <td id="column-border" class="ital">{{ priorityText(task) }}</td>
+      <td id="column-border" class="ital">{{ taskAge(task) }}</td>
+      <td><i ng-class="!task.completed? 'fa fa-square-o' : 'fa fa-check-square'" ng-click="toggle(task)"></i></td>
+      <td><i class="fa fa-times" aria-hidden="true" ng-click="tasks.$remove(task)"></i></td>
     </tr>
   </table>
 
   <br><br>
 
-  <a ui-sref="history" class="ghost-button">Task History</a>
+  <a ui-sref="history" class="main-btn">Task History</a>
   </center>
 
 </div>

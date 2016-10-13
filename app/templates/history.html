@@ -1,5 +1,5 @@
 <center>
-  <table class="raleway">
+  <table>
     <tr>
       <thead><th colspan="4" id="list-name">Past to-dos:</th></thead>
     </tr>
@@ -10,10 +10,10 @@
     </tr>
     <tr ng-repeat="task in tasks" ng-show="expiredTask(task)">
       <td id="column-border">{{ task.text }}</td>
-      <td id="column-border" class="grey-ital">{{ priorityText(task) }}</td>
-      <td class="grey-ital">{{ taskAge(task) }}</td>
+      <td id="column-border" class="ital">{{ priorityText(task) }}</td>
+      <td class="ital">{{ taskAge(task) }}</td>
     </tr>
   </table>
   <br><br>
-  <a ui-sref="home" class="ghost-button">back to current tasks</a>
+  <a ui-sref="home" class="main-btn">back to current tasks</a>
 </center>

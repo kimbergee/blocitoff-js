@@ -2,12 +2,16 @@ body {
   margin-left: 100px;
   margin-right: 100px;
   margin-bottom: 100px;
+  color: #51545E;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 h1 {
   text-align: center;
-  font-size: 50px;
-  font-family: 'Pacifico', cursive;
+  font-size: 70px;
+  font-family: 'Poiret One', cursive;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 h5 {
@@ -16,28 +20,31 @@ h5 {
   font-family: 'Poiret One', cursive;
 }
 
-.raleway {
-  font-family: 'Raleway', sans-serif;
+table {
+  border: 1px solid #c9dcf9;
+  padding: 10px 5px 10px 20px;
+  min-width: 450px;
 }
 
-#red-pc {
-  color: #FC9D9A;
+td {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 16px;
 }
 
-.grey-ital {
-  color: #c9c9c9;
+.ital {
   font-style: italic;
   font-size: 12px;
 }
 
-.ghost-button {
-  color: #C9E4F9;
-  background: #fff;
-  border: 1px solid #C9E4F9;
-  font-family: 'Raleway', sans-serif;
-  font-size: 15px;
+.main-btn {
+  color: #fff;
+  background: #c9dcf9;
+  border: 1px solid #c9dcf9;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 900;
   padding: 7px 12px;
-  font-weight: normal;
   margin: 6px 0;
   margin-right: 6px;
   display: inline-block;
@@ -46,96 +53,87 @@ h5 {
   min-width: 60px;
 }
 
-.ghost-button:hover {
-  background-color: #C9E4F9;
-  color: white;
-}
-
-.ghost-button-small {
-  color: #C9E4F9;
-  background: #fff;
-  border: none !important;
-  font-family: 'Raleway', sans-serif;
-  font-size: 12px;
-  padding: 2px 4px;
-  font-weight: normal;
-  margin: 3px 0;
-  margin-right: 3px;
-  display: inline-block;
-  text-decoration: none !important;
-  text-align: center;
-  min-width: 60px;
-}
-
-.ghost-button-small:hover {
-  background-color: #C9E4F9;
-  color: white;
+.main-btn:hover {
+  cursor: pointer;
 }
 
 .task-input {
-  border: 1px solid #C9E4F9;
-  font-family: 'Raleway', sans-serif;
-  font-size: 17px;
+  border: 1px solid #c9dcf9;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
   padding: 7px 12px;
   font-weight: normal;
   margin-right: 6px;
   display: inline-block;
 }
 
+.task-input:focus {
+  outline: none;
+}
+
 .drop-down {
-  border: 1px solid #C9E4F9;
+  border: 1px solid #c9dcf9;
   background-color: white;
-  font-family: 'Raleway', sans-serif;
-  font-size: 12px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
   font-weight: normal;
   margin-right: 20px;
   display: inline-block;
 }
 
-table {
-  border: 1px solid #C9E4F9;
-  padding: 10px 5px 10px 20px;
-}
-
-td {
-  padding-left: 10px;
-  padding-right: 10px;
+.drop-down:focus {
+  outline: none;
 }
 
 #list-name {
-  font-family: 'Pacifico', cursive;
+  font-family: 'Poiret One', cursive;
+  font-weight: 900;
+  text-transform: uppercase;
   font-size: 30px;
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 #column-name {
-  font-family: 'Pacifico', cursive;
-  font-size: 16px;
-  font-weight: 100;
+  font-family: 'Poiret One', cursive;
+  font-size: 20px;
+  font-weight: 900;
   text-align: left;
   padding-bottom: 10px;
   padding-left: 10px;
 }
 
 #column-border {
-  border-right: 1px dashed #C9E4F9;
+  border-right: 1px dashed #c9dcf9;
 }
 
-.fa-circle-o:hover {
+.fa-times {
+  color: #FC9D9A;
+  -webkit-text-stroke: 1px white;
+}
+
+.fa-times:hover {
   cursor: pointer;
 }
 
-.fa-check-circle:hover {
+.fa-square-o {
+  color: #c9dcf9;
+}
+
+.fa-square-o:hover {
   cursor: pointer;
 }
 
+.fa-check-square {
+  color: #c9dcf9;
+}
+
+.fa-check-square:hover {
+  cursor: pointer;
+}
 
 
 /*
 font-family: 'Josefin Sans', sans-serif;
-font-family: 'Pacifico', cursive;
 font-family: 'Poiret One', cursive;
-font-family: 'Permanent Marker', cursive;
-font-family: 'Raleway', sans-serif;
 */
