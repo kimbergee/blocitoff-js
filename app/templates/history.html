@@ -4,13 +4,13 @@
       <thead><th colspan="4" id="list-name">Past to-dos:</th></thead>
     </tr>
     <tr>
-      <th colspan="1" id="column-name">Description</th>
-      <th colspan="1" id="column-name">Priority</th>
-      <th colspan="1" id="column-name">Created</th>
+      <th colspan="1" class="column-name">Description</th>
+      <th colspan="1" class="column-name">Priority</th>
+      <th colspan="1" class="column-name">Created</th>
     </tr>
     <tr ng-repeat="task in tasks" ng-show="expiredTask(task)">
-      <td id="column-border">{{ task.text }}</td>
-      <td id="column-border" class="ital">{{ priorityText(task) }}</td>
+      <td class="column-border">{{ task.text }}</td>
+      <td class="column-border ital">{{ priorityText(task) }}</td>
       <td class="ital">{{ taskAge(task) }}</td>
     </tr>
   </table>

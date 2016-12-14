@@ -3,7 +3,7 @@
   <!-- push a new task onto the array -->
   <center>
     <form ng-submit="addTask()">
-      <input class="task-input" ng-model="newTask.text" placeholder="Add a new task" />
+      <input id="task-input" ng-model="newTask.text" placeholder="Add a new task" />
       <select class="drop-down" ng-model="newTask.priority" placeholder="Set priority level" />
         <option value="3">low</option>
         <option value="2">medium</option>
@@ -19,14 +19,14 @@
       <thead><th colspan="4" id="list-name">Current to-dos:</th></thead>
     </tr>
     <tr>
-      <th colspan="1" id="column-name">Description</th>
-      <th colspan="1" id="column-name">Priority</th>
-      <th colspan="1" id="column-name">Created</th>
+      <th colspan="1" class="column-name">Description</th>
+      <th colspan="1" class="column-name">Priority</th>
+      <th colspan="1" class="column-name">Created</th>
     </tr>
     <tr ng-repeat="task in tasks | orderBy: 'priority'" ng-hide="expiredTask(task)">
-      <td id="column-border">{{ task.text }}</td>
-      <td id="column-border" class="ital">{{ priorityText(task) }}</td>
-      <td id="column-border" class="ital">{{ taskAge(task) }}</td>
+      <td class="column-border">{{ task.text }}</td>
+      <td class="column-border ital">{{ priorityText(task) }}</td>
+      <td class="column-border ital">{{ taskAge(task) }}</td>
       <td><i ng-class="!task.completed? 'fa fa-square-o' : 'fa fa-check-square'" ng-click="toggle(task)"></i></td>
       <td><i class="fa fa-times" aria-hidden="true" ng-click="tasks.$remove(task)"></i></td>
     </tr>
