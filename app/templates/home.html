@@ -1,15 +1,15 @@
 <div ng-controller="HomeCtrl">
+  <div class="center">
 
   <!-- push a new task onto the array -->
-  <center>
     <form ng-submit="addTask()">
-      <input id="task-input" ng-model="newTask.text" placeholder="Add a new task" />
-      <select class="drop-down" ng-model="newTask.priority" placeholder="Set priority level" />
+      <input ng-model="newTask.text" placeholder="Add a new task" />
+      <select ng-model="newTask.priority" placeholder="Set priority level" />
         <option value="3">low</option>
         <option value="2">medium</option>
         <option value="1">high</option>
       </select>
-      <button type="submit" class="main-btn">add</button>
+      <button type="submit">add</button>
     </form>
 
   <br><br>
@@ -19,9 +19,9 @@
       <thead><th colspan="4" id="list-name">Current to-dos:</th></thead>
     </tr>
     <tr>
-      <th colspan="1" class="column-name">Description</th>
-      <th colspan="1" class="column-name">Priority</th>
-      <th colspan="1" class="column-name">Created</th>
+      <th colspan="1">Description</th>
+      <th colspan="1">Priority</th>
+      <th colspan="1">Created</th>
     </tr>
     <tr ng-repeat="task in tasks | orderBy: 'priority'" ng-hide="expiredTask(task)">
       <td class="column-border">{{ task.text }}</td>
@@ -34,7 +34,7 @@
 
   <br><br>
 
-  <a ui-sref="history" class="main-btn">Task History</a>
-  </center>
+  <a ui-sref="history">Task History</a>
 
+  </div>
 </div>

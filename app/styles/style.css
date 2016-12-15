@@ -14,13 +14,18 @@ body {
 
 #tagline {
   text-align: center;
-  font-family: 'Poiret One', cursive;
   padding-bottom: 2em;
 }
 
-#task-input {
-  border: 1px solid #c9dcf9;
+.center {
+  text-align: center;
+  margin: auto;
   font-family: 'Josefin Sans', sans-serif;
+}
+
+form input {
+  font-family: 'Josefin Sans', sans-serif;
+  border: 1px solid #c9dcf9;
   font-size: 1em;
   padding: .5em 1em;
   margin: .5em 1em;
@@ -28,28 +33,26 @@ body {
   display: inline-block;
 }
 
-#task-input:focus {
-  outline: none;
-}
-
-.drop-down {
+form select {
+  font-family: 'Josefin Sans', sans-serif;
   border: 1px solid #c9dcf9;
   background-color: white;
-  font-family: 'Josefin Sans', sans-serif;
   font-size: 1em;
   font-weight: normal;
   display: inline-block;
 }
 
-.drop-down:focus {
+form input:focus,
+form select:focus {
   outline: none;
 }
 
-.main-btn {
+form button,
+.center a {
+  font-family: 'Josefin Sans', sans-serif;
   color: #fff;
   background: #c9dcf9;
   border: 1px solid #c9dcf9;
-  font-family: 'Josefin Sans', sans-serif;
   font-size: 1em;
   font-weight: 900;
   padding: .5em 1em;
@@ -60,11 +63,12 @@ body {
   min-width: 4em;
 }
 
-.main-btn:hover {
+form button:hover {
   cursor: pointer;
 }
 
 table {
+  margin: auto;
   border: 1px solid #c9dcf9;
   padding: 1em;
   min-width: 30em;
@@ -79,7 +83,7 @@ table {
   padding-bottom: .75em;
 }
 
-th.column-name {
+tr th {
   font-family: 'Poiret One', cursive;
   font-size: 1.4em;
   font-weight: 900;
@@ -92,6 +96,7 @@ td {
   padding-left: .75em;
   padding-right: .75em;
   font-size: 1.25em;
+  text-align: left;
 }
 
 td.column-border {
@@ -108,23 +113,12 @@ td.ital {
   -webkit-text-stroke: 1px white;
 }
 
-.fa-times:hover {
-  cursor: pointer;
-}
-
 .fa-square-o {
   color: #c9dcf9;
 }
 
-.fa-square-o:hover {
-  cursor: pointer;
-}
-
-.fa-check-square {
-  color: #c9dcf9;
-}
-
-.fa-check-square:hover {
+.fa-square-o:hover,
+.fa-times:hover {
   cursor: pointer;
 }
 

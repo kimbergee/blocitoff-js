@@ -1,12 +1,12 @@
-<center>
+<div class="center">
   <table>
     <tr>
       <thead><th colspan="4" id="list-name">Past to-dos:</th></thead>
     </tr>
     <tr>
-      <th colspan="1" class="column-name">Description</th>
-      <th colspan="1" class="column-name">Priority</th>
-      <th colspan="1" class="column-name">Created</th>
+      <th colspan="1">Description</th>
+      <th colspan="1">Priority</th>
+      <th colspan="1">Created</th>
     </tr>
     <tr ng-repeat="task in tasks" ng-show="expiredTask(task)">
       <td class="column-border">{{ task.text }}</td>
@@ -15,5 +15,5 @@
     </tr>
   </table>
   <br><br>
-  <a ui-sref="home" class="main-btn">back to current tasks</a>
-</center>
+  <a ui-sref="home">back to current tasks</a>
+</div>
